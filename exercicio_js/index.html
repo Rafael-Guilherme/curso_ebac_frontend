@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Exercicio HTML e JS</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Formulário de cadastro de idade</h1>
+        <form id="form-cadastro">
+            <div class="input-form">
+                <label for="idade">Sua idade</label>
+                <input type="number" id="idade" placeholder="Sua Idade" required />
+            </div>
+            <div class="input-form">
+                <label for="nascimento">Seu ano de nascimento</label>
+                <input type="number" id="nascimento" placeholder="Ano de nascimento" required />
+                <p id="campo_nascimento">Corrija o campo acima!</p>
+                <P id="mensagem-erro">O ano deve conter 4 dígitos ou está incorreto!</P>
+            </div>
+            <button type="submit" id="btn-cadastrar">Cadastrar</button>
+            <p id="sucesso">Seu cadastro foi feito com sucesso!</p>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

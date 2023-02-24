@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    width: 500px;
+}
+
+.input-form {
+    margin: 16px 0;
+}
+
+label {
+    width: 100%;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(219, 219, 219);
+}
+
+input:focus {
+    outline-color: darkblue;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: large;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    background-color: darkblue;
+    color: azure;
+    cursor: pointer;
+}
+
+#campo_nascimento,
+#mensagem-erro {
+    margin-top: 3px;
+    padding: 8px;
+    background-color: red;
+    color: azure;
+    border-radius: 10px;
+    display: none;
+}
+
+#sucesso {
+    margin-top: 3px;
+    padding: 8px;
+    background-color: green;
+    color: azure;
+    border-radius: 10px;
+    font-weight: 600;
+    text-align: center;
+    display: none;
+}
