@@ -46,7 +46,8 @@ button {
 }
 
 #campo_nascimento,
-#mensagem-erro {
+#mensagem-erro,
+#erro-idade {
     margin-top: 3px;
     padding: 8px;
     background-color: red;

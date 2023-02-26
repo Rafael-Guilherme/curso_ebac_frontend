@@ -4,7 +4,25 @@ const nascimento = document.getElementById('nascimento')
 const sucesso = document.querySelector('#sucesso')
 const campoNascimento = document.querySelector('#campo_nascimento')
 const msgError = document.getElementById('mensagem-erro')
+const idadeError = document.getElementById('erro-idade')
 const currentYear = new Date().getFullYear();
+
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault()
+
+  if (Number(idade.value) < Number(nascimento.value)) {
+    validar()
+    idadeError.style.display = 'none'
+    idade.style.border = ''
+  } else {
+    idadeError.style.display = 'block'
+    idade.style.border = '1px solid red'
+    sucesso.style.display = 'none'
+    msgError.style.display = 'none'
+    nascimento.style.border = ''
+  }
+})
 
 //Função para validar que o ano tem 4 dígitos
 //e que a idade e o ano são correspondentes.
@@ -14,28 +32,28 @@ function validateCampoNascimento() {
   const nascimentoValue = nascimento.value;
 
   if (nascimentoValue.length !== 4) {
-    msgError.style.display = 'block';
-    nascimento.style.border = '1px solid red';
+    msgError.style.display = 'block'
+    nascimento.style.border = '1px solid red'
     return false;
   }
 
   const idadeValue = currentYear - nascimentoValue;
   
   if (idade.value !== idadeValue.toString()) {
-    msgError.style.display = 'block';
-    nascimento.style.border = '1px solid red';
+    msgError.style.display = 'block'
+    nascimento.style.border = '1px solid red'
     return false;
   }
 
-  msgError.style.display = 'none';
-  nascimento.style.border = '';
+  msgError.style.display = 'none'
+  nascimento.style.border = ''
+  sucesso.style.display = 'none'
   return true;
 }
 
 //Evento quando submeter o form previne o reload da página
 //verifica se a função é true or false.
-form.addEventListener('submit', function(e) {
-    e.preventDefault()
+function validar() {
 
     if (validateCampoNascimento()) {
         sucesso.style.display = 'block'
@@ -47,4 +65,4 @@ form.addEventListener('submit', function(e) {
         nascimento.style.border = '1px solid red'
         campoNascimento.style.display = 'block'
     }
-})
+}
