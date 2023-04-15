@@ -27,6 +27,7 @@ const pessoa1 = new Pessoa("João", 30, "masculino")
 const pessoa2 = new PessoaTrabalhadora("Maria", 25, "feminino", "desenvolvedora full stack")
 const pessoa3 = new PessoaEstudante("Pedro", 20,"masculino","front-end")
 
+
 pessoa1.falar()
 pessoa2.trabalhar()
 pessoa3.estudar()
